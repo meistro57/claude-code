@@ -1,5 +1,17 @@
 # Changelog
 
+## Unreleased
+
+### Added
+- **LM Studio Integration**: Native support for local LM Studio models through MCP (Model Context Protocol)
+  - Automatic model discovery and selection
+  - Health checking and testing tools
+  - Interactive setup script (`lm_studio_integration.py`)
+  - Comprehensive diagnostics and troubleshooting tools
+  - Full MCP server implementation for seamless Claude Code integration
+  - Support for multiple models including Gemma, DeepSeek, and embedding models
+  - Usage: `claude --mcp-config ~/.claude/mcp.json "your prompt"`
+
 ## 1.0.51
 
 - Added support for native Windows (requires Git for Windows)

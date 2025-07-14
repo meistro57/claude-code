@@ -20,6 +20,32 @@ npm install -g @anthropic-ai/claude-code
 
 2. Navigate to your project directory and run `claude`.
 
+## LM Studio Integration
+
+Claude Code now supports integration with local LM Studio models through the MCP (Model Context Protocol). This allows you to use your own local models instead of or alongside Anthropic's Claude models.
+
+### Quick Setup
+
+1. **Install LM Studio** and load a model
+2. **Start the local server** (usually on port 1234)
+3. **Run the integration script**:
+   ```bash
+   python3 lm_studio_integration.py
+   ```
+4. **Use with Claude Code**:
+   ```bash
+   claude --mcp-config ~/.claude/mcp.json "your prompt here"
+   ```
+
+### Features
+
+- **Automatic model discovery**: Lists all loaded models in LM Studio
+- **Interactive model selection**: Choose which model to use
+- **Health checking**: Verifies LM Studio server is running
+- **MCP integration**: Works seamlessly with Claude Code's tool system
+
+For detailed setup instructions, see [README_LM_STUDIO.md](README_LM_STUDIO.md).
+
 ## Reporting Bugs
 
 We welcome your feedback. Use the `/bug` command to report issues directly within Claude Code, or file a [GitHub issue](https://github.com/anthropics/claude-code/issues).
